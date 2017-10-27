@@ -1,0 +1,177 @@
+{% extends logged == 'logged' 
+    ? 'loginBundle:Default:basicentidade.html.twig' 
+    : 'loginBundle:Default:basic.html.twig' %}
+{%block container %}
+
+<script>
+    $(function () {
+        var parent = $("#shuffle");
+        var divs = parent.children();
+        while (divs.length) {
+            parent.append(divs.splice(Math.floor(Math.random() * divs.length), 1)[0]);
+        }
+    });
+    function starte() {
+        questaoToggle(1);
+        $('#btnst').hide("slide", { direction: "right" }, 0);
+        $("#bnt11").val(1);
+        $("#bnt21").val(1);
+        if($('#questao2').length > 0)
+        {
+            //...
+        }
+        else
+        {
+            $("#finishbtn").show("slide", { direction: "right" }, 0);
+        }
+    }
+    
+    function questaoToggle(id)
+    {
+        var qid = '#questao'+id;
+        var qvis = qid+':visible';
+        if($(qvis).length)
+        {
+            $(qid).hide("slide", { direction: "right" }, 0);
+        }
+        else
+        {
+            $(qid).show("slide", { direction: "right" }, 0);  
+        }
+    }
+    
+    function next(id) {
+        var idm, idp;
+        idm=id;
+        id=Number(id)+Number(1);
+        idp=Number(id)+Number(1);
+        var qbnt1 = '#bnt1'+id;
+        var qbnt2 = '#bnt2'+id;
+        var qid = '#questao'+id;
+        var qip = '#questao'+idp; 
+        if($(qid).length > 0)
+        {
+            questaoToggle(idm);
+            questaoToggle(id);
+            $(qbnt1).val(id);
+            $(qbnt2).val(id);
+            if($(qip).length > 0)
+            {
+                //...
+            }
+            else
+            {
+                $("#finishbtn").show("slide", { direction: "right" }, 0);
+            }
+        }
+        
+    }
+    function back(id) {
+        if(Number(id)>1)
+        {
+            var idm;
+            idm=id;
+            id=Number(id)-Number(1);
+            var qbnt1 = '#bnt1'+id;
+            var qbnt2 = '#bnt2'+id;
+            questaoToggle(idm);
+            questaoToggle(id);
+            $(qbnt1).val(id);
+            $(qbnt2).val(id);
+        }
+    }
+</script>
+
+<style type="text/css">
+        #wrap {
+           width:100%;
+           margin:0 auto;
+        }
+</style>
+    
+    <div class="container">
+
+        <div class="row">
+            <div class="box">
+                <div class="col-lg-12 text-center">
+                    
+                    <div class="col-xs-12" style="height:30px;"></div>
+                    
+                    <h2>{{quizz.getNome()}}</h2>
+                    
+                    <div class="col-xs-12" style="height:70px;"></div>
+                    
+                    <div id="wrap">
+                        <div class="col-lg-3 text-center"></div>
+                        <div class="col-lg-6 text-left" id="btnst">
+                        <button onclick="starte($(this).val());" class="btn btn-primary btn-block" value="0">Começar</button>
+                            <p>Após responder todas as questões, clique no botão Terminar</p>
+                        </div>
+                        <form name="quizzform" action="{{path('login_checaquizz',{'idquizz':quizz.getId()})}}" method="POST" data-validate="parsley">
+                            <div class="col-lg-12">
+                                <div class="col-lg-12 text-justify">
+                                    {%set i = 1%} 
+                                    {% for row in questoes %}
+                                        <div class="col-lg-12 text-justify" id="questao{{i}}" style="display: none;">
+                                            <h3>Questão #{{i}}</h3>
+                                            <div class="col-xs-12" style="height:30px;"></div>
+                                            <p>{{row.getEnunciado()}}</p>
+                                            <div class="col-xs-12" style="height:40px;"></div>
+                                            <div class="form-group col-lg-12">
+                                                <div class="questoes{{i}}">
+                                                    <ol type="a" id="shuffle">
+                                                        <div><li><input readonly type="text" class="form-control" id="answer{{i}}a" name="answer{{i}}a" data-required="true" value="{{row.getAlta()}}"></li></div>
+                                                        <div><li><input readonly type="text" class="form-control" id="answer{{i}}b" name="answer{{i}}b" data-required="true" value="{{row.getAltb()}}"></li></div>
+                                                        <div><li><input readonly type="text" class="form-control" id="answer{{i}}c" name="answer{{i}}c" data-required="true" value="{{row.getAltc()}}"></li></div>
+                                                        <div><li><input readonly type="text" class="form-control" id="answer{{i}}d" name="answer{{i}}d" data-required="true" value="{{row.getAltd()}}"></li></div>
+                                                        
+                                                    </ol>
+                                                    <label for="sangue">Resposta: </label>
+                                                    <select class="form-control" id="answer{{i}}" name="answer{{i}}" data-trigger="change" data-required="true">
+                                                        <option selected disabled>Escolha aqui</option>
+                                                        <option>a</option>
+                                                        <option>b</option>
+                                                        <option>c</option>
+                                                        <option>d</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12" style="height:50px;"></div>
+
+                                            <div class="col-lg-2">
+                                            <button type="button" onclick="back($(this).val());" class="btn btn-primary btn-block" value="0" id ="bnt1{{i}}">Anterior</button>
+                                            </div>
+
+                                            <div class="col-lg-8"></div>
+
+                                            <div class="col-lg-2">
+                                                <button type="button" onclick="next($(this).val());" class="btn btn-primary btn-block" value="0" id ="bnt2{{i}}">Próximo</button>
+                                            </div>
+
+
+                                        </div>
+                                        {%set i = i+1%}
+                                    {% endfor %}
+                                </div>
+                            </div>
+                            <div class="col-xs-12" style="height:50px;"></div>
+                            <div class="col-lg-3 text-center"></div>
+                            <div class="col-lg-6 text-center">
+                                <button type="submit" class="btn btn-default btn-block" id="finishbtn" style="display: none;">Terminar</button>
+                            </div>
+                        </form>
+                        <div class="col-xs-12" style="height:50px;"></div>
+                        <form role="form" method="POST" action="{{path('login_eventolista')}}" data-validate="parsley">
+                            <div class="col-lg-3 text-center"></div>
+                            <div class="col-lg-6 text-center">
+                                <button type="submit" class="btn btn-default btn-block" name="volta" value="voltar">Desistir</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+{%endblock%}

@@ -1,0 +1,24 @@
+{%extends "loginBundle:Default:index.html.twig"%}
+{%block container %}
+<div class="container" >
+    <form id="form" class="well" method="POST" action="{{path('login_signup')}}" data-validate="parsley">
+        <h2>Sign Up</h2>
+        <label>Username</label>
+        <input type="text" id="username" name="username" placeholder="Input your username here..." class="input-xlarge" data-trigger="change" data-required="true">
+        <label>Email</label>
+        <input type="text" name="email" placeholder="Input your email here..." class="input-xlarge" data-trigger="change" data-required="true" data-type="email">
+        <label>Name</label>
+        <input type="text" name="firstname" placeholder="Input your name here..." class="input-xlarge" data-trigger="change" data-required="true">
+        <label>Password</label>
+        <input type="password" name="password" placeholder="Input your password here..." class="input-xlarge" data-trigger="change" data-required="true">
+        <div>
+            <button class="btn btn-primary" type="submit" >Create Account</button>
+        </div>
+         {% if name is defined%}
+        <div class="alert-info fade in">
+            <strong>{{name}}</strong>
+        </div>
+    {%endif%}
+    </form>
+</div>
+ {%endblock%}

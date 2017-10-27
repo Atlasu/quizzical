@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Main\loginBundle\Entity\Questao" table="questao">
+    <indexes>
+      <index name="fk_quizz_id" columns="IDQUIZZ"/>
+    </indexes>
+    <id name="id" type="integer" column="ID">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="idquizz" type="string" column="IDQUIZZ" length="100" nullable="false"/>
+    <field name="enunciado" type="string" column="ENUNCIADO" length="500" nullable="false"/>
+    <field name="alta" type="string" column="ALTA" length="100" nullable="false"/>
+    <field name="altb" type="string" column="ALTB" length="100" nullable="false"/>
+    <field name="altc" type="string" column="ALTC" length="100" nullable="false"/>
+    <field name="altd" type="string" column="ALTD" length="100" nullable="false"/>
+    <field name="answer" type="string" column="ANSWER" length="100" nullable="false"/>
+  </entity>
+</doctrine-mapping>

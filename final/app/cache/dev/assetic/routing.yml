@@ -1,0 +1,5 @@
+_assetic:
+    resource: .
+    type: assetic
+_app:
+    resource: 'C:\Users\Gyordano\Documents\Quizzical\final\app/config/routing_dev.yml'

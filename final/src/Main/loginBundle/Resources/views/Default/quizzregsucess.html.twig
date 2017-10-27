@@ -1,0 +1,40 @@
+{% extends 'loginBundle:Default:basicentidade.html.twig' %}
+        
+{%block container %}
+    <div class="container">
+
+        <div class="row">
+            <div class="box">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="col-lg-12 text-center">
+                            <p><strong>Seu quizz foi criado com sucesso!</strong></p>
+                            <div class="col-xs-12" style="height:20px;"></div>
+                            <p>Muito bom!</p>
+                            
+                            <div class="col-xs-12" style="height:50px;"></div>
+                            <form role="form" action="{{path('login_eventoreg')}}">
+                                <div class="row">
+                                    <div class="form-group col-lg-4 text-center"></div>
+                                    <div class="form-group col-lg-4 text-center">
+                                        <button type="submit" class="btn btn-primary btn-block">Criar outro Quizz</button>
+                                    </div>
+                                </div>
+                            </form>
+                            <div class="col-xs-12" style="height:50px;"></div>
+                            <form role="form" action="{{path('login_eventolista')}}">
+                                <div class="row">
+                                    <div class="form-group col-lg-4 text-center"></div>
+                                    <div class="form-group col-lg-4 text-center">
+                                        <button type="submit" class="btn btn-primary btn-block">Ir para lista de Quizzes</button>
+                                    </div>
+                                </div>
+                            </form>
+                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+{%endblock%}

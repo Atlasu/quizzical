@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Main\loginBundle\Entity\Doador" table="doador">
+    <unique-constraints>
+      <unique-constraint name="USERNAME" columns="USERNAME"/>
+      <unique-constraint name="IDFACEBOOK" columns="IDFACEBOOK"/>
+    </unique-constraints>
+    <id name="id" type="integer" column="ID">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="password" type="string" column="PASSWORD" length="100" nullable="false"/>
+    <field name="username" type="string" column="USERNAME" length="100" nullable="false"/>
+    <field name="tiposangue" type="string" column="TIPOSANGUE" length="10" nullable="false"/>
+    <field name="rhsangue" type="string" column="RHSANGUE" length="10" nullable="false"/>
+    <field name="peso" type="boolean" column="PESO" nullable="false"/>
+    <field name="estado" type="string" column="ESTADO" length="100" nullable="false"/>
+    <field name="cidade" type="string" column="CIDADE" length="100" nullable="false"/>
+    <field name="nome" type="string" column="NOME" length="100" nullable="false"/>
+    <field name="idfacebook" type="string" column="IDFACEBOOK" length="100" nullable="false"/>
+  </entity>
+</doctrine-mapping>

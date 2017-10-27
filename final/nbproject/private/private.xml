@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/Gyordano/Documents/Quizzical/final/src/Main/loginBundle/Entity/Quizz.php</file>
+            <file>file:/C:/Users/Gyordano/Documents/Quizzical/final/app/AppCache.php</file>
+            <file>file:/C:/Users/Gyordano/Documents/Quizzical/final/app/config/routing_dev.yml</file>
+            <file>file:/C:/Users/Gyordano/Documents/Quizzical/final/src/Main/loginBundle/Resources/views/Default/formevento.html.twig</file>
+            <file>file:/C:/Users/Gyordano/Documents/Quizzical/final/src/Main/loginBundle/Resources/views/Default/formentidade.html.twig</file>
+            <file>file:/C:/Users/Gyordano/Documents/Quizzical/final/src/Main/loginBundle/Controller/DefaultController.php</file>
+            <file>file:/C:/Users/Gyordano/Documents/Quizzical/final/src/Main/loginBundle/Form/Type/QuestaoType.php</file>
+            <file>file:/C:/Users/Gyordano/Documents/Quizzical/final/src/Main/loginBundle/Resources/views/Form/form_div_layout.html.twig</file>
+            <file>file:/C:/Users/Gyordano/Documents/Quizzical/final/src/Main/loginBundle/Resources/views/Form/bootstrapLayout.html.twig</file>
+            <file>file:/C:/Users/Gyordano/Documents/Quizzical/final/src/Main/loginBundle/Resources/config/routing.yml</file>
+            <file>file:/C:/Users/Gyordano/Documents/Quizzical/final/composer.json</file>
+            <file>file:/C:/Users/Gyordano/Documents/Quizzical/final/app/config/config.yml</file>
+            <file>file:/C:/Users/Gyordano/Documents/Quizzical/final/src/Main/loginBundle/Resources/views/Default/loginuser.html.twig</file>
+            <file>file:/C:/Users/Gyordano/Documents/Quizzical/final/app/AppKernel.php</file>
+            <file>file:/C:/Users/Gyordano/Documents/Quizzical/final/src/Main/loginBundle/Resources/views/Default/basicentidade.html.twig</file>
+            <file>file:/C:/Users/Gyordano/Documents/Quizzical/final/src/Main/loginBundle/Form/Type/QuizzType.php</file>
+            <file>file:/C:/Users/Gyordano/Documents/Quizzical/final/src/Main/loginBundle/Resources/views/Form/bootstrap_base_layout.html.twig</file>
+            <file>file:/C:/Users/Gyordano/Documents/Quizzical/final/src/Main/loginBundle/Entity/Questao.php</file>
+        </group>
+    </open-files>
+</project-private>

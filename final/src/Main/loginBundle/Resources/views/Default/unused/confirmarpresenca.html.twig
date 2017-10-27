@@ -1,0 +1,93 @@
+{%extends "loginBundle:Default:basicdoadorlogado.html.twig"%}
+{%block container %}
+    <div class="container">
+
+        <div class="row">
+            <div class="box">
+                <div class="col-lg-12">
+                    <hr>
+                    <h2 class="intro-text text-center">
+                        <strong>Confirmar Presença</strong>
+                    </h2>
+                    <hr>
+                    <div class="col-xs-12" style="height:30px;"></div>
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-8">
+                        <table class="table table-bordered" border="0" celpadding="0" cellspacing="0">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="col-lg-12 text-center">
+                                            <div class="col-lg-12 text-center">
+                                                <p>
+                                                    <strong>Evento:</strong> {{nome}}
+                                                </p>
+                                            </div>
+                                            <hr>
+                                            <div class="col-xs-12" style="height:30px;"></div>
+                                            <div class="col-lg-12 text-left">
+                                                <p><strong>Rua:</strong></p>
+                                            </div>
+                                            <div class="col-lg-12 text-left">
+                                                <p>{{rua}}, {{numero}}</p>
+                                            </div>
+                                            <div class="col-lg-12 text-left">
+                                                <p><strong>Bairro:</strong></p>
+                                            </div>
+                                            <div class="col-lg-12 text-left">
+                                                <p>{{bairro}}</p>
+                                            </div>
+                                            <div class="col-lg-12 text-left">
+                                                <p><strong>Horário:</strong></p>
+                                            </div>
+                                            <div class="col-lg-12 text-left">
+                                                <p>entre {{datainicio}} e {{datafim}}</p>
+                                                <p>das {{horainicio}} às {{horafim}}</p>
+                                            </div>
+                                            <div class="col-xs-12" style="height:25px;"></div>
+                                            <div class="col-lg-12 text-left">
+                                                <p><strong>Descrição:</strong></p>
+                                            </div>
+                                            <div class="col-lg-12 text-justify">
+                                                <p>{{descricao}}</p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="col-xs-12" style="height:50px;"></div>
+                        {%if presente is defined%}
+                        <table class="table table-bordered" border="0" celpadding="0" cellspacing="0">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="col-lg-12 text-center">
+                                            <p>
+                                                <strong>Obrigado por confirmar.</strong>
+                                            </p>
+                                            <p>
+                                                <strong>Sua participação é muito antecipada.</strong>
+                                            </p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        {%else%}
+                        <form role="form" method="POST" action="{{path('login_doador_confirmarpresenca',{'iddoevento':id})}}" data-validate="parsley">
+                            <div class="col-lg-12 text-center">
+                                <div class="form-group col-lg-12">
+                                    <button type="submit" class="btn btn-default" name="confirm" value="confirmado">Confirmar Presença</button>
+                                </div>
+                            </div>
+                        </form>
+                        {%endif%}
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+{%endblock%}

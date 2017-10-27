@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Main\loginBundle\Entity\Presenca" table="presenca">
+    <indexes>
+      <index name="fk_evento_id" columns="IDEVENTO"/>
+      <index name="fk_doador_id" columns="IDDOADOR"/>
+    </indexes>
+    <id name="id" type="integer" column="ID">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="idevento" type="string" column="IDEVENTO" length="100" nullable="false"/>
+    <field name="iddoador" type="string" column="IDDOADOR" length="100" nullable="false"/>
+  </entity>
+</doctrine-mapping>

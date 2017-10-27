@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>App Doador De Sangue</title>
+
+    <link rel="stylesheet" href="{{asset('bundles/login/css/bootstrap.css')}}">
+    <link rel="stylesheet" href="{{asset('bundles/login/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{asset('bundles/login/css/business-casual.css')}}">
+
+    <!-- Fonts -->
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <div class="brand">App Doador De Sangue</div>
+    <div class="address-bar">Aplicativo para auxiliar doação de sangue</div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Navegação</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!-- navbar-brand is hidden on larger screens, but visible when the menu is collapsed -->
+                <a class="navbar-brand" href="index.html">App Doador De Sangue</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="{{path('login_homepage')}}" >Início</a>
+                    </li>
+                    <li>
+                        <a href="{{path('login_about')}}" >Sobre</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <div class="container">
+
+        <div class="row">
+            <div class="box">
+                <div class="col-lg-12">
+                    <hr>
+                    <h2 class="intro-text text-center">
+						<strong>Registre-se!</strong>
+                    </h2>
+                    <hr>
+                    <p>
+						Registrar é fácil! Apenas insira suas informações aqui e iremos lhe manter informado!
+					</p>
+                    <form role="form">
+                        <div class="row">
+                            <div class="form-group col-lg-12">
+                                <label>Nome</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="form-group col-lg-12">
+                                <label>Cidade</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="form-group col-lg-6">
+                                <label>Você tem mais do que 50 quilos?</label>
+                                <input type="checkbox" class="form-control">
+                            </div>
+                            <div class="clearfix"></div>
+                            <div class="form-group col-lg-6">
+                                <label for="sel1">Insira seu tipo sanguíneo:</label>
+									  <select class="form-control" id="sel1">
+										<option>A</option>
+										<option>B</option>
+										<option>AB</option>
+										<option>O</option>
+										<option>Não Sei</option>
+									  </select>
+                            </div>
+							<div class="form-group col-lg-6">
+                                <label for="sel2">Insira seu RH:</label>
+									  <select class="form-control" id="sel2">
+										<option>+</option>
+										<option>-</option>
+										<option>Não Sei</option>
+									  </select>
+                            </div>
+                            <div class="form-group col-lg-12">
+                                <button type="submit" class="btn btn-default">Registre-me</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="box">
+                <div class="col-lg-12">
+                    <hr>
+                    <h2 class="intro-text text-center">
+						<strong>Registre-se!</strong>
+                    </h2>
+                    <hr>
+                    <p>
+						Por favor preencha este formulário em nome da sua organização para utilizar o nosso app.
+					</p>
+                    <form role="form">
+                        <div class="row">
+                            <div class="form-group col-lg-12">
+                                <label>Nome</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="form-group col-lg-12">
+                                <label>Cidade</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="form-group col-lg-12">
+                                <label>CNPJ</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="form-group col-lg-12">
+                                <button type="submit" class="btn btn-default">Registre-me</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!--div class="row">
+            <div class="box">
+                <div class="col-lg-12">
+                    <hr>
+                    <h2 class="intro-text text-center">Texto Padrão
+                        <strong>Texto Texto</strong>
+                    </h2>
+                    <hr>
+                    <p>Use as many boxes as you like, and put anything you want in them! They are great for just about anything, the sky's the limit!</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc placerat diam quis nisl vestibulum dignissim. In hac habitasse platea dictumst. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+                </div>
+            </div>
+        </div-->
+
+    </div>
+    <!-- /.container -->
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <p>Copyright &copy; Gyordano e Companhia (A gente precisa de nomes melhores, honestamente).</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{{asset('bundles/login/css/jquery.js')}}"></script>
+    <script src="{{asset('bundles/login/css/bootstrap.js')}}"></script>
+    <script src="{{asset('bundles/login/css/bootstrap.min.js')}}"></script>
+
+</body>
+
+</html>

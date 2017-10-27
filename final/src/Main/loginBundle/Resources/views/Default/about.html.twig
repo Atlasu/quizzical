@@ -1,0 +1,64 @@
+{% extends logged == 'logged' 
+    ? 'loginBundle:Default:basicentidade.html.twig' 
+    : 'loginBundle:Default:basic.html.twig' %}
+{%block container %}
+    <div class="container">
+
+        <div class="row">
+            <div class="box text-justify">
+                <div class="col-lg-3"></div>
+                <div class="col-lg-6">
+                    <p>Projeto desenvolvido para o Desafio de Programação da empresa <a href="https://estudar.com.vc/">Estudar com vc</a>.</p>
+                    <p>O projeto foi produzido utilizando o Symfony, versão 2.8, na IDE NetBeans.</p>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="box">
+                <div class="col-lg-12">
+                    <hr>
+                    <h2 class="intro-text text-center">A equipe responsável por
+                        <strong>ESSE PROJETO</strong>
+                    </h2>
+                    <hr>
+                </div>
+
+
+                <div class="col-sm-4 text-center">
+                    <img class="img-responsive" src="{{asset('bundles/login/img/gyor.jpg')}}" width="42%" height="42%" style='border-radius: 40px; display: block; margin: auto;'>
+                    <h3>Gyordano Gadoni Reis
+                        <small></small>
+                    </h3>
+                    <p>Aluno de Graduação</p>
+                    <p>Universidade de São Paulo - USP</p>
+                    <p>Dept. EESC e ICMC</p>
+                </div>
+                    
+                <div class="col-sm-8 text-justify">
+                    <p> Engenharia da Computação, Universidade de São Paulo.
+                    (Julho de 2018) - Cursando </p>
+                    
+                    <p>
+                        Possui conhecimentos básicos como desenvolvedor web, mais especificadamente na função de desenvolvedor Full-Stack. Também já participou de projetos de desenvolvimento Android como programador.
+                    <p>
+                    
+                    <h3>
+                        Experiências
+                    </h3>
+                    
+                    <p>Projeto de Iniciação Científica
+
+Modelos epidemiológicos com alerta em redes complexas
+Bolsa FAPESP Maio 2016 – Abril 2017
+Realizou simulações dos principais modelos epidemiológicos à fim de entender como políticas de disseminação de informação podem ser desenvolvidas para diminuir o impacto de uma epidemia em uma sociedade. 
+                    </p>
+
+                </div>
+
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+{%endblock%}

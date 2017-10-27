@@ -1,0 +1,50 @@
+{% extends logged == 'logged' 
+    ? 'loginBundle:Default:basicdoadorlogado.html.twig' 
+    : 'loginBundle:Default:basicdoador.html.twig' %}
+{%block container %}
+    <div class="container">
+
+        <div class="row">
+            <div class="box">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <hr>
+                            <h2 class="intro-text text-center">
+                                <strong>Informações Úteis</strong>
+                            </h2>
+                        <hr>
+                        <div class="col-lg-12">
+                            <p><strong>Não poderá doar quem possui: </strong></p>
+                            <ul>
+                                <li>
+                                    Doenças Sexualmente Transmissíveis
+                                    <ul>
+                                        <li>HIV</li>
+                                        <li>Hepatite B</li>
+                                        <li>Hepatite C</li>
+                                        <li>Sífilis</li>
+                                    </ul>
+                                </li>
+                                <li>Alcoolismo crônico</li>
+                                <li>Relações sexuais de risco</li>
+                                <li>Endoscopia / Colonoscopia (6 meses)</li>
+                                <li>Gripe, dor de garganta, febre e diarréia (15 dias)</li>
+                                <li>Medicações: Trazer os nomes dos remédios em uso</li>
+                                <li>Tatuagem e Piercing (1 ano)</li>
+                                <li>Transfusão de sangue (1 ano)</li>
+                                <li>Uso de Antibiótico (25 dias)</li>
+                                <li>Pacientes que passaram por tratamento oncológico (Câncer)</li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-12 text-justify">
+                            <p><strong>Importante</strong></p>
+                            <p>Todo sangue coletado será submetido, a exames sorológicos pelo Ministério da Saúde. Caso ocorram resultados alterados, o doador será por carta ou outro meio para repetir os seus exames. Se isso acontecer não deixe de comparecer ao nosso serviço de esclarecimentos e/ou para repetir os exames, pois só assim voçê poderá ser liberado para doar sangue novamente.</p>
+                            <p>Lembramos que podem ocorrer resultados falsos positivos, sem que, necessariamente, signifiquem doenças.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+{%endblock%}

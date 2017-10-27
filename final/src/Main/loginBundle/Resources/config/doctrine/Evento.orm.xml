@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Main\loginBundle\Entity\Evento" table="evento">
+    <unique-constraints>
+      <unique-constraint name="NOME" columns="NOME"/>
+    </unique-constraints>
+    <id name="id" type="integer" column="ID">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="nome" type="string" column="NOME" length="100" nullable="false"/>
+    <field name="cidade" type="string" column="CIDADE" length="100" nullable="false"/>
+    <field name="estado" type="string" column="ESTADO" length="100" nullable="false"/>
+    <field name="rua" type="string" column="RUA" length="100" nullable="false"/>
+    <field name="bairro" type="string" column="BAIRRO" length="100" nullable="false"/>
+    <field name="numero" type="integer" column="NUMERO" nullable="false"/>
+    <field name="complemento" type="string" column="COMPLEMENTO" length="100" nullable="false"/>
+    <field name="descricao" type="string" column="DESCRICAO" length="500" nullable="true"/>
+    <field name="linkfacebook" type="string" column="LINKFACEBOOK" length="100" nullable="false"/>
+    <field name="datainicio" type="date" column="DATAINICIO" nullable="false"/>
+    <field name="datafim" type="date" column="DATAFIM" nullable="false"/>
+    <field name="horainicio" type="time" column="HORAINICIO" nullable="false"/>
+    <field name="horafim" type="time" column="HORAFIM" nullable="false"/>
+  </entity>
+</doctrine-mapping>

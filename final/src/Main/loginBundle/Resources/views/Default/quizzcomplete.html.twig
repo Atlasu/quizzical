@@ -1,0 +1,86 @@
+{% extends logged == 'logged' 
+    ? 'loginBundle:Default:basicentidade.html.twig' 
+    : 'loginBundle:Default:basic.html.twig' %} 
+{%block container %}
+
+<style type="text/css">
+        #wrap {
+           width:100%;
+           margin:0 auto;
+        }
+        #left_col {
+           float:left;
+           width:50%;
+        }
+        #right_col {
+           float:right;
+           width:50%;
+        }
+        #orangetitle {
+            color: #ff7f00;
+            font-family: Tahoma, Verdana;
+            font-size: 24px;
+            float: left;
+        }
+        #bluetitle {
+            color: #337ab7;
+            font-family: Tahoma, Verdana;
+            font-size: 24px;
+            float: left;
+        }
+        .hline-bottom {
+            padding-bottom: 40px;
+            margin-bottom: 50px;
+            border-bottom: 2px solid #DCD1CB; /* whichever color you prefer */
+        }
+</style>    
+
+    <div class="container">
+
+        <div class="row">
+            <div class="box">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <hr>
+                            <h2 class="intro-text text-center">
+                                <strong>Muito bom!</strong>
+                            </h2>
+                        <hr>
+                        <div class="col-lg-12 text-center">
+                            <p><strong>Aqui estão os resultados do seu quizz!</strong></p>
+                            <div class="col-xs-12" style="height:20px;"></div>
+                            <div id="wrap">
+                                <div id="left_col">
+                                    <p>O quizz respondido foi '{{quizz.getNome()}}'</p>
+                                    <p>Você acertou {{acertos}} dentre {{total}} questões!</p>
+                                </div> 
+                                <div id="right_col">
+                                    <p>Sua taxa de acertos: {{final}}%</p>
+                                </div>
+                            </div>
+                            <div class="col-xs-12" style="height:50px;"></div>
+                            <form role="form" action="{{path('login_evento',{'idquizz': quizz.getId() } )}}">
+                                <div class="row">
+                                    <div class="form-group col-lg-4 text-center"></div>
+                                    <div class="form-group col-lg-4 text-center">
+                                        <button type="submit" class="btn btn-primary btn-block">Tentar novamente</button>
+                                    </div>
+                                </div>
+                            </form>
+                            <div class="col-xs-12" style="height:20px;"></div>
+                            <form role="form" action="{{path('login_eventolista')}}">
+                                <div class="row">
+                                    <div class="form-group col-lg-4 text-center"></div>
+                                    <div class="form-group col-lg-4 text-center">
+                                        <button type="submit" class="btn btn-primary btn-block">Ir para lista de Quizzes</button>
+                                    </div>
+                                </div>
+                            </form>
+                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+{%endblock%}

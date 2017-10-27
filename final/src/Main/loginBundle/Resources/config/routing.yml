@@ -1,0 +1,54 @@
+login_homepage:
+    path: index/
+    defaults: { _controller: loginBundle:Default:index }
+login_profile:
+    path: profile/
+    defaults: { _controller: loginBundle:Default:profile }
+login_login_facebook:
+    path: facebook/
+    defaults: { _controller: loginBundle:Default:loginfacebook }
+login_evento_destroy:
+    path: evento/remove/
+    defaults: { _controller: loginBundle:Default:eventodestroy }
+login_facebookreg:
+    path: facebook/register/
+    defaults: { _controller: loginBundle:Default:facebookreg }    
+login_about:
+    path: about/
+    defaults: { _controller: loginBundle:Default:about }
+login_login:
+    path: login/
+    defaults: { _controller: loginBundle:Default:login }
+login_logout:
+    path: logout/
+    defaults: { _controller: loginBundle:Default:logout }
+login_logout2:
+    path: clear/
+    defaults: { _controller: loginBundle:Default:clear }
+login_entidadereg:
+    path: register_entidade/
+    defaults: { _controller: loginBundle:Default:entidadereg }
+login_eventoreg:
+    path: register_evento/
+    defaults: { _controller: loginBundle:Default:eventoreg }
+login_questaoreg:
+    path: register_questao/
+    defaults: { _controller: loginBundle:Default:questaoreg }
+login_evento_edit:
+    path: evento/edit
+    defaults: { _controller: loginBundle:Default:eventoedit }
+login_evento:
+    path: event/{idquizz}
+    defaults: { _controller: loginBundle:Default:evento }
+login_checaquizz:
+    path: event/{idquizz}/check
+    defaults: { _controller: loginBundle:Default:checaquizz }
+login_eventolista:
+    path: evento_lista/
+    defaults: { _controller: loginBundle:Default:eventolista }
+login_errorlogin:
+    path: login/f
+    defaults: { _controller: loginBundle:Default:errorlogin }
+login_notfound:
+    path: errorNotFound/
+    defaults: { _controller: loginBundle:Default:notfound }

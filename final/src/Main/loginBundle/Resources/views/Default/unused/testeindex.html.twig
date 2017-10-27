@@ -1,0 +1,57 @@
+{%extends "loginBundle:Default:basic.html.twig"%}
+{%block container %}
+    
+    <div class="container">
+
+        <div class="row">
+            <div class="box">
+                <div class="col-lg-12">
+                    <hr>
+                    <h2 class="intro-text text-center">Você está no
+                        <strong>DEBUG MENU</strong>
+                    </h2>
+                    <hr>
+
+					<div class="col-lg-12 text-center">
+					</div>
+
+					<div class="col-lg-12">
+						<ul>
+							<li>
+								<a href="{{path('login_homepage')}}">Home</a>
+							</li>
+                                                        <li>
+								<a href="{{path('login_login')}}">Login</a>
+							</li>
+							
+							<li>
+								<a href="{{path('login_doadorreg')}}">Doador Registro</a>
+							</li>
+							<li>
+								<a href="{{path('login_entidadereg')}}">Entidade Registro</a>
+							</li>
+                                                        
+                                                        <li>
+								<a href="{{path('login_eventoreg')}}">Evento Registro</a>
+							</li>
+                                                        
+                                                        <li>
+								<a href="{{path('login_eventolista')}}">Listar Eventos</a>
+							</li>
+                                                        
+                                                        <li>
+								<a href="{{path('login_evento')}}">TestEvento</a>
+							</li>
+                                                        <li>
+								<a href="{{path('login_about')}}">About</a>
+							</li>
+						</ul>
+					</div>
+                <div class="clearfix"></div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+{%endblock%}
